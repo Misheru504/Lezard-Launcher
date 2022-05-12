@@ -10,7 +10,7 @@
     "dataDirectory": "lezard",
     "ignored": [],
     "status": {
-      "ip": "127.0.0.1",
+      "ip": "172.65.234.205",
       "port": 25565
     }
 }
