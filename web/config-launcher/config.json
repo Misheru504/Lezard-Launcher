@@ -7,7 +7,7 @@
     "verify": false,
     "java": true,
     "game_args": [],
-    "dataDirectory": "lezard",
+    "dataDirectory": ".lezard",
     "ignored": [],
     "status": {
       "ip": "172.65.234.205",
