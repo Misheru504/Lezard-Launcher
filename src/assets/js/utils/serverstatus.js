@@ -1,7 +1,7 @@
 const net = require('net');
 
 class status {
-    constructor(ip = '0.0.0.0', port = 25565) {
+    constructor(ip = '135.125.65.203', port = 25652) {
         this.ip = ip
         this.port = port
     }

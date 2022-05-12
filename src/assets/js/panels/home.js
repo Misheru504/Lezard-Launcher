@@ -182,7 +182,7 @@ class Home {
         let serverPing = await new status(this.config.status.ip, this.config.status.port).getStatus();
 
         if (!serverPing.error) {
-            nameServer.textContent = this.config.dataDirectory;
+            nameServer.textContent = this.config.status.name;
             serverMs.innerHTML = `<span class="green">Online</span> - ${serverPing.ms}ms`;
             online.classList.toggle("off");
             playersConnected.textContent = serverPing.players;

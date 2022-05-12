@@ -11,7 +11,8 @@
     "ignored": [],
     "status": {
       "ip": "135.125.65.203",
-      "port": 25652
+      "port": 25652,
+      "name": "test server"
     }
 }
   
