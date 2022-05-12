@@ -18,7 +18,7 @@
         "node": "16.x.x"
     },
     "chromium-args": "--enable-logging --v=1",
-    "url": "http://launcher.selvania.fr",
+    "url": "https://raw.githubusercontent.com/MissionSteam504/Lezard-Launcher/master",
     "user": false,
     "webkit": {
         "plugin": true

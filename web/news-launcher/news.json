@@ -1,23 +1,9 @@
 [
     {
-        "id":"6",
-        "title":"les news pour les autres launchers arrive.",
-        "content":"Bonjour a tous,\r\n\r\nLes news arrivent tr\u00e8s prochainement pour les launcher alternative.\r\n\r\nIls seront disponible pour le 15 mai 2022 (peut arriver avant \ud83d\ude09).",
-        "author":"Luuxis",
-        "publish_date":"2022-04-26 14:56:20"
-    },
-    {
-        "id":"5",
-        "title":"test de rss",
-        "content":"bonjoure je test les flux rss",
-        "author":"Luuxis",
-        "publish_date":"2022-04-21 14:10:06"
-    },
-    {
-        "id":"1",
-        "title":"Vous L'attendiez tous !",
-        "content":"Vous l'attendiez tous,  elles commencent \u00e0 arriver ! \r\nLes news sont ici \u2192 ou par l\u00e0 \u2190 ou peut \u00eatre m\u00eame ici \u2191. \r\nL'interface web est sur le feux aussi ! Vous pourrez bient\u00f4t modifier vos news via une petite page web sympa \ud83d\ude04\r\nBisous \u00e0 vous tous et merci pour votre soutient !",
-        "author":"le d0ck",
-        "publish_date":"2022-04-14 16:39:07"
+        "id":"0",
+        "title":"News Test One",
+        "content":"Test of the news system provided by Luuxis ( Selvania Launcher )",
+        "author":"MissionSteam504",
+        "publish_date":"2022-05-12 18:30:25"
     }
 ]
