@@ -1,0 +1,19 @@
+{
+    "maintenance": false,
+    "maintenance_message": "Le launcher est en maintenance.<br>Merci de bien vouloir essayer ultérieurement.",
+    "online": true,
+    "client_id": "",
+    "game_version": "22w18a",
+    "custom": false,
+    "verify": false,
+    "java": true,
+    "game_args": [],
+    "dataDirectory": "selvania-test",
+    "ignored": [],
+    "status": {
+      "ip": "127.0.0.1",
+      "port": 25565
+    }
+}
+  
+  

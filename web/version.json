@@ -1,0 +1,14 @@
+{
+    "version": "2.9.94",
+    "packages": {
+      "win64": {
+        "url": "http://launcher.selvania.fr/launcher/update-launcher/Selvania-Launcher-win-x64.zip"
+      },
+      "mac64": {
+        "url": "http://launcher.selvania.fr/launcher/update-launcher/Selvania-Launcher-mac-x64.zip"
+      },
+      "linux64": {
+        "url": "http://launcher.selvania.fr/launcher/update-launcher/Selvania-Launcher-linux-x64.zip"
+      }
+    }
+  }
