@@ -95,6 +95,13 @@
     width: 100%;
 }
 
+.close-text{
+    position: relative;
+    font-family: Poppins;
+    font-size: 13px !important;
+    color: #E1E1E1;
+}
+
 
 /*******************************************************************************
  *                                                                             *

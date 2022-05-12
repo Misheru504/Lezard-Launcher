@@ -121,12 +121,6 @@
 
 .news-block {
     margin-bottom: 1rem;
-    transition: opacity 1s;
-    opacity: .4;
-}
-
-.news-block:hover {
-    transition: opacity 1s;
     opacity: 1;
 }
 
@@ -189,6 +183,13 @@
     font-size: 14px;
 }
 
+.info-title {
+    position: relative;
+    font-family: Poppins;
+    font-size: 13px !important;
+    color: #E1E1E1;
+}
+
 .news-content {
     position: relative;
     width: 100%;
@@ -229,12 +230,6 @@
     height: 75px;
     background-color: #292929;
     border-radius: 10px;
-    transition: opacity 1s;
-    opacity: .4;
-}
-
-.server:hover {
-    transition: opacity 1s;
     opacity: 1;
 }
 
