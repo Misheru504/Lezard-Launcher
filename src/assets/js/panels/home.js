@@ -56,7 +56,7 @@ class Home {
                         <div class="news-content">
                             <div class="bbWrapper">
                                 <p>${News.content.replace(/\n/g, '</br>')}</p>
-                                <p class="news-author">Auteur,<span> ${News.author}</span></p>
+                                <p class="news-author">Author : <span> ${News.author}</span></p>
                             </div>
                         </div>`
                     news.appendChild(blockNews);
@@ -107,7 +107,7 @@ class Home {
             }
 
             let opts = {
-                url: this.config.game_url === "" || this.config.game_url === undefined ? `${urlpkg}/files` : this.config.game_url,
+                url: this.config.game_url === "" || this.config.game_url === undefined ? `${urlpkg}/web/files` : this.config.game_url,
                 authenticator: account,
                 path: `${dataDirectory}/${process.platform == 'darwin' ? this.config.dataDirectory : `.${this.config.dataDirectory}`}`,
                 version: this.config.game_version,
@@ -183,7 +183,7 @@ class Home {
 
         if (!serverPing.error) {
             nameServer.textContent = this.config.dataDirectory;
-            serverMs.innerHTML = `<span class="green">En ligne</span> - ${serverPing.ms}ms`;
+            serverMs.innerHTML = `<span class="green">Online</span> - ${serverPing.ms}ms`;
             online.classList.toggle("off");
             playersConnected.textContent = serverPing.players;
         } 
@@ -200,7 +200,7 @@ class Home {
         let year = date.getFullYear()
         let month = date.getMonth() + 1
         let day = date.getDate()
-        let allMonth = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
+        let allMonth = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
         return { year: year, month: allMonth[month - 1], day: day }
     }
 }

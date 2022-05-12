@@ -1,12 +1,12 @@
 {
-    "name": "Selvania-Launcher",
-    "version": "3.0.0-pre.2",
-    "productName": "Selvania Launcher",
+    "name": "lezard-launcher",
+    "version": "alpha2",
+    "productName": "Lezard Launcher",
     "description": "Launcher Mincraft custom (crack, premium)",
     "main": "src/index.html",
     "author": "Luuxis",
     "window": {
-        "title": "Selvania update",
+        "title": "Lezard update",
         "width": 400,
         "height": 500,
         "frame": false,
@@ -34,7 +34,7 @@
     },
     "license": "CC0",
     "build": {
-        "appId": "Selvania Launcher",
+        "appId": "Lezard Launcher",
         "nwVersion": "0.64.0",
         "packed": false,
         "args": ["--user-data-dir=./AppData/launcher data"],
@@ -60,7 +60,7 @@
         "overriddenProperties": {
             "main": "app/index.html",
             "window": {
-                "title": "Selvania update",
+                "title": "Lezard update",
                 "width": 400,
                 "height": 500,
                 "frame": false,
@@ -71,16 +71,16 @@
         },
         "outputPattern": "${NAME}-${PLATFORM}-${ARCH}",
         "win": {
-            "productName": "Selvania Launcher",
-            "companyName": "Selvania Launcher",
+            "productName": "Lezard Launcher",
+            "companyName": "Lezard Launcher",
             "copyright": "copyright",
             "icon": "src/assets/images/icon.ico"
         },
         "mac": {
-            "displayName": "Selvania-Launcher",
+            "displayName": "Lezard-Launcher",
             "copyright": "copyright",
             "plistStrings": {
-                "CFBundleIdentifier": "Selvania-Launcher"
+                "CFBundleIdentifier": "Lezard-Launcher"
             }
         },
         "nsis": {

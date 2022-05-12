@@ -61,8 +61,8 @@ class Settings {
         let totalMem = Math.trunc(os.totalmem() / 1073741824 * 10) / 10;
         let freeMem = Math.trunc(os.freemem() / 1073741824 * 10) / 10;
 
-        document.getElementById("total-ram").textContent = `${totalMem} Go`;
-        document.getElementById("free-ram").textContent = `${freeMem} Go`;
+        document.getElementById("total-ram").textContent = `${totalMem} GB`;
+
 
         let sliderDiv = document.querySelector(".memory-slider");
         sliderDiv.setAttribute("max", Math.trunc((80 * totalMem) / 100));
@@ -85,7 +85,7 @@ class Settings {
 
     async initJavaPath() {
         let javaDatabase = (await this.database.get('1234', 'java-path'))?.value?.path;
-        let javaPath = javaDatabase ? javaDatabase : 'Utiliser la version de java livre avec le launcher';
+        let javaPath = javaDatabase ? javaDatabase : 'Use the java version provided by the launcher';
         document.querySelector(".info-path").textContent = `${dataDirectory.replace(/\\/g, "/")}/${this.config.dataDirectory}/runtime`;
 
         let path = document.querySelector(".path");
@@ -110,7 +110,7 @@ class Settings {
         });
 
         document.querySelector(".path-button-reset").addEventListener("click", () => {
-            path.value = 'Utiliser la version de java livre avec le launcher';
+            path.value = 'Use the java version provided by the launcher';
             file.value = '';
             this.database.update({ uuid: "1234", path: false }, 'java-path');
         });

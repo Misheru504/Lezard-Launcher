@@ -8,27 +8,10 @@ class Login {
     async init(config) {
         this.config = config
         this.database = await new database().init();
-        if (this.config.online) this.getOnline()
-        else this.getOffline()
-    }
-
-    getOnline() {
         console.log(`Initializing microsoft Panel...`)
         console.log(`Initializing mojang Panel...`)
         this.loginMicrosoft();
         this.loginMojang();
-        document.querySelector('.cancel-login').addEventListener("click", () => {
-            document.querySelector(".cancel-login").style.display = "none";
-            changePanel("settings");
-        })
-    }
-
-    getOffline() {
-        console.log(`Initializing microsoft Panel...`)
-        console.log(`Initializing mojang Panel...`)
-        console.log(`Initializing offline Panel...`)
-        this.loginMicrosoft();
-        this.loginOffline();
         document.querySelector('.cancel-login').addEventListener("click", () => {
             document.querySelector(".cancel-login").style.display = "none";
             changePanel("settings");

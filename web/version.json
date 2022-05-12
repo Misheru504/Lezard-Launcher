@@ -1,5 +1,5 @@
 {
-    "version": "2.9.94",
+    "version": "alpha2",
     "packages": {
       "win64": {
         "url": "http://launcher.selvania.fr/launcher/update-launcher/Selvania-Launcher-win-x64.zip"
