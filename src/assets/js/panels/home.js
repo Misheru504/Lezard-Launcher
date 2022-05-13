@@ -106,7 +106,7 @@ class Home {
                 }
             }
 
-            console.log("InitLaunch var loaded sucessfully")
+            console.log("InitLaunch vars loaded sucessfully")
 
             let opts = {
                 url: `https://github.com/MissionSteam504/Lezard-Launcher/raw/master/web/files`,
@@ -127,10 +127,9 @@ class Home {
                 }
             }
 
-            console.log(opts.url)
-
             playBtn.style.display = "none"
             info.style.display = "block"
+
             console.log("before launch")
             launch.launch(opts)
             console.log("after launch")
