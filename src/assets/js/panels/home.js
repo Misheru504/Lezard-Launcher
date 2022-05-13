@@ -128,6 +128,8 @@ class Home {
             playBtn.style.display = "none"
             info.style.display = "block"
             launch.launch(opts);
+            console.log(opts.url)
+            console.log(opts.custom)
 
             launch.on('progress', (DL, totDL) => {
                 progressBar.style.display = "block"
