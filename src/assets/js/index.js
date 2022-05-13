@@ -51,9 +51,9 @@ class Splash {
             if (res.maintenance) return this.shutdown(res.maintenance_message);
             else this.checkUpdate();
         }).catch(err => {
-            console.log("impossible de charger le config.json");
+            console.log("Unable to load config.json on the server");
             console.log(err);
-            return this.shutdown("Aucune connexion internet détectée,<br>veuillez réessayer ultérieurement.");
+            return this.shutdown("Please check your internet connexion and/or try again later");
         })
     }
 
@@ -70,18 +70,18 @@ class Splash {
         });
 
         this.toggleProgress();
-        this.setStatus(`Téléchargement de la mise à jour`);
+        this.setStatus(`Downloading Update...`);
         const file = await updater.download(manifest);
-        this.setStatus(`Décompression de la mise à jour`);
+        this.setStatus(`Unzipping Update...`);
         await updater.unpack(file);
         this.toggleProgress();
-        this.setStatus(`Redémarrage`);
+        this.setStatus(`Restarting...`);
         await updater.restartToSwap();
     }
 
 
     startLauncher() {
-        this.setStatus(`Démarrage du launcher`);
+        this.setStatus(`Starting`);
         nw.Window.open('./src/launcher.html', {
             "title": pkg.productName,
             "width": 1280,
@@ -97,10 +97,10 @@ class Splash {
     }
 
     shutdown(text) {
-        this.setStatus(`${text}<br>Arrêt dans 5s`);
+        this.setStatus(`${text}<br>Stop in 5s`);
         let i = 4;
         setInterval(() => {
-            this.setStatus(`${text}<br>Arrêt dans ${i--}s`);
+            this.setStatus(`${text}<br>Stop in ${i--}s`);
             if (i < 0) win.close();
         }, 1000);
     }

@@ -8,6 +8,10 @@ class Login {
     async init(config) {
         this.config = config
         this.database = await new database().init();
+        this.getOnline()
+    }
+
+    getOnline() {
         console.log(`Initializing microsoft Panel...`)
         console.log(`Initializing mojang Panel...`)
         this.loginMicrosoft();
