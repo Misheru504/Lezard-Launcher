@@ -107,7 +107,7 @@ class Home {
             }
 
             let opts = {
-                url: this.config.game_url === "" || this.config.game_url === undefined ? `https://github.com/MissionSteam504/Lezard-Launcher/raw/master/web/files` : this.config.game_url,
+                url: this.config.game_url === "" || this.config.game_url === undefined ? `${urlpkg}/files` : this.config.game_url,
                 authenticator: account,
                 path: `${dataDirectory}/${process.platform == 'darwin' ? this.config.dataDirectory : `.${this.config.dataDirectory}`}`,
                 version: this.config.game_version,
