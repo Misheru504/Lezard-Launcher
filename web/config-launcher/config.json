@@ -3,11 +3,11 @@
     "maintenance_message": "The launcher is under maintenance.<br> Please try again later.",
     "client_id": "",
     "game_version": "1.18.2",
-    "custom": "MCP",
+    "custom": false,
     "verify": false,
     "java": true,
     "game_args": [],
-    "dataDirectory": ".lezard",
+    "dataDirectory": ".lezard-client",
     "ignored": [],
     "status": {
       "ip": "135.125.65.203",

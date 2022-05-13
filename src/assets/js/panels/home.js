@@ -106,8 +106,10 @@ class Home {
                 }
             }
 
+            console.log("InitLaunch var loaded sucessfully")
+
             let opts = {
-                url: this.config.game_url === "" || this.config.game_url === undefined ? `${urlpkg}/web/files` : this.config.game_url,
+                url: `https://github.com/MissionSteam504/Lezard-Launcher/raw/master/web/files/`,
                 authenticator: account,
                 path: `${dataDirectory}/${process.platform == 'darwin' ? this.config.dataDirectory : `.${this.config.dataDirectory}`}`,
                 version: this.config.game_version,
@@ -131,19 +133,19 @@ class Home {
 
             launch.on('progress', (DL, totDL) => {
                 progressBar.style.display = "block"
-                document.querySelector(".text-download").innerHTML = `Téléchargement ${((DL / totDL) * 100).toFixed(0)}%`
+                document.querySelector(".text-download").innerHTML = `Downloading ${((DL / totDL) * 100).toFixed(0)}%`
                 win.setProgressBar(DL / totDL);
                 progressBar.value = DL;
                 progressBar.max = totDL;
             })
 
             launch.on('speed', (speed) => {
-                console.log(`${(speed / 1067008).toFixed(2)} Mb/s`)
+                console.log(`${(speed / 1067008).toFixed(2)} MB/s`)
             })
 
             launch.on('check', (e) => {
                 progressBar.style.display = "block"
-                document.querySelector(".text-download").innerHTML = `Vérification ${((DL / totDL) * 100).toFixed(0)}%`
+                document.querySelector(".text-download").innerHTML = `Validating ${((DL / totDL) * 100).toFixed(0)}%`
                 progressBar.value = DL;
                 progressBar.max = totDL;
 
@@ -154,7 +156,7 @@ class Home {
                 if(launcherSettings.launcher.close === 'close-launcher') win.hide();
                 progressBar.style.display = "none"
                 win.setProgressBar(0);
-                info.innerHTML = `Demarrage en cours...`
+                info.innerHTML = `Starting...`
                 console.log(e);
             })
 
@@ -167,7 +169,7 @@ class Home {
                 progressBar.style.display = "none"
                 info.style.display = "none"
                 playBtn.style.display = "block"
-                info.innerHTML = `Vérification`
+                info.innerHTML = `Validating...`
                 new logger('Launcher', '#7289da', logcontent);
                 console.log('Close');
             })
