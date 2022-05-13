@@ -106,6 +106,8 @@ class Home {
                 }
             }
 
+            console.log("InitLaunch var loaded sucessfully")
+
             let opts = {
                 url: `https://github.com/MissionSteam504/Lezard-Launcher/raw/master/web/files`,
                 authenticator: account,
@@ -125,11 +127,16 @@ class Home {
                 }
             }
 
+            console.log(opts.url)
+
             playBtn.style.display = "none"
             info.style.display = "block"
-            launch.launch(opts);
+            console.log("before launch")
+            launch.launch(opts)
+            console.log("after launch")
 
             launch.on('progress', (DL, totDL) => {
+                console.log("after launch 2")
                 progressBar.style.display = "block"
                 document.querySelector(".text-download").innerHTML = `Downloading ${((DL / totDL) * 100).toFixed(0)}%`
                 win.setProgressBar(DL / totDL);
