@@ -73,7 +73,7 @@ class Home {
                 </div>
                 <div class="news-content">
                     <div class="bbWrapper">
-                        <p>Impossible de contacter le serveur des news.</br>Merci de vérifier votre configuration.</p>
+                        <p>Cannot connect to the server</br>Please check your internet connexion</p>
                     </div>
                 </div>`
             news.appendChild(blockNews);
@@ -106,10 +106,8 @@ class Home {
                 }
             }
 
-            console.log("InitLaunch vars loaded sucessfully")
-
             let opts = {
-                url: `https://github.com/MissionSteam504/Lezard-Launcher/raw/master/web/files`,
+                url: this.config.game_url === "" || this.config.game_url === undefined ? `https://github.com/MissionSteam504/Lezard-Launcher/raw/master/web/files` : this.config.game_url,
                 authenticator: account,
                 path: `${dataDirectory}/${process.platform == 'darwin' ? this.config.dataDirectory : `.${this.config.dataDirectory}`}`,
                 version: this.config.game_version,
@@ -129,13 +127,9 @@ class Home {
 
             playBtn.style.display = "none"
             info.style.display = "block"
-
-            console.log("before launch")
-            launch.launch(opts)
-            console.log("after launch")
+            launch.launch(opts);
 
             launch.on('progress', (DL, totDL) => {
-                console.log("after launch 2")
                 progressBar.style.display = "block"
                 document.querySelector(".text-download").innerHTML = `Downloading ${((DL / totDL) * 100).toFixed(0)}%`
                 win.setProgressBar(DL / totDL);
@@ -192,7 +186,10 @@ class Home {
             serverMs.innerHTML = `<span class="green">Online</span> - ${serverPing.ms}ms`;
             online.classList.toggle("off");
             playersConnected.textContent = serverPing.players;
-        } 
+        } else {
+            nameServer.textContent = 'Server unavailable';
+            serverMs.innerHTML = `<span class="red">Offline</span>`;
+        }
     }
 
     initBtn() {
