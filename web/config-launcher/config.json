@@ -3,7 +3,7 @@
     "maintenance_message": "The launcher is under maintenance.<br> Please try again later.",
     "client_id": "",
     "game_version": "1.18.2",
-    "custom": false,
+    "custom": "MCP",
     "verify": false,
     "java": true,
     "game_args": [],
