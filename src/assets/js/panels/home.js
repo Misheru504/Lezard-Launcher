@@ -106,8 +106,6 @@ class Home {
                 }
             }
 
-            console.log("InitLaunch var loaded sucessfully")
-
             let opts = {
                 url: `https://github.com/MissionSteam504/Lezard-Launcher/raw/master/web/files`,
                 authenticator: account,
