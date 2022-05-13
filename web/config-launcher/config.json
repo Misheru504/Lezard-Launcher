@@ -7,7 +7,7 @@
     "verify": false,
     "java": true,
     "game_args": [],
-    "dataDirectory": ".lezard-client",
+    "dataDirectory": "lezard-client",
     "ignored": [],
     "status": {
       "ip": "135.125.65.203",
