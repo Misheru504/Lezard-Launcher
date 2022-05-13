@@ -109,7 +109,7 @@ class Home {
             console.log("InitLaunch var loaded sucessfully")
 
             let opts = {
-                url: `https://github.com/MissionSteam504/Lezard-Launcher/raw/master/web/files/`,
+                url: `https://github.com/MissionSteam504/Lezard-Launcher/raw/master/web/files`,
                 authenticator: account,
                 path: `${dataDirectory}/${process.platform == 'darwin' ? this.config.dataDirectory : `.${this.config.dataDirectory}`}`,
                 version: this.config.game_version,
