@@ -207,13 +207,14 @@
     transition: color .2s;
 }
 
-.news-author {
-    text-align: end;
+.news-end {
+    text-align: center;
     margin: 0;
+    padding-right: 0%;
     color: #F1F1F1;
 }
 
-.news-author span {
+.news-end span {
     font-style: italic;
 }
 
