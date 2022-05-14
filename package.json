@@ -1,6 +1,6 @@
 {
     "name": "lezard-launcher",
-    "version": "alpha3",
+    "version": "alpha4",
     "productName": "Lezard Launcher",
     "description": "Launcher Mincraft custom (crack, premium)",
     "main": "src/index.html",
