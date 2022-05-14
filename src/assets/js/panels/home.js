@@ -128,8 +128,6 @@ class Home {
             playBtn.style.display = "none"
             info.style.display = "block"
             launch.launch(opts);
-            console.log(opts.url)
-            console.log(opts.custom)
 
             launch.on('progress', (DL, totDL) => {
                 progressBar.style.display = "block"
@@ -169,7 +167,7 @@ class Home {
                 progressBar.style.display = "none"
                 info.style.display = "none"
                 playBtn.style.display = "block"
-                info.innerHTML = `Validating...`
+                info.innerHTML = `Validating`
                 new logger('Launcher', '#7289da', logcontent);
                 console.log('Close');
             })
