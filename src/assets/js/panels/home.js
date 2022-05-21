@@ -186,7 +186,7 @@ class Home {
             serverMs.innerHTML = `<span class="green">Online</span> - ${serverPing.ms}ms`;
             online.classList.toggle("off");
             playersConnected.textContent = serverPing.players;
-        } else {
+        } else if(serverPing.error){
             nameServer.textContent = 'Server unavailable';
             serverMs.innerHTML = `<span class="red">Offline</span>`;
         }

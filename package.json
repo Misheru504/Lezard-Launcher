@@ -1,10 +1,10 @@
 {
     "name": "lezard-launcher",
-    "version": "alpha4",
+    "version": "0.0.5",
     "productName": "Lezard Launcher",
     "description": "Launcher Mincraft custom (crack, premium)",
     "main": "src/index.html",
-    "author": "Luuxis",
+    "author": "MissionSteam504, Luuxis",
     "window": {
         "title": "Lezard update",
         "width": 400,
@@ -18,7 +18,7 @@
         "node": "16.x.x"
     },
     "chromium-args": "--enable-logging --v=1",
-    "url": "http://82.165.116.150",
+    "url": "http://82.165.116.150/launcher-files",
     "user": false,
     "webkit": {
         "plugin": true
@@ -105,6 +105,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/luuxis/Uzurion-Launcher.git"
+        "url": "git+https://github.com/MissionSteam504/Lezard-Launcher.git"
     }
 }
