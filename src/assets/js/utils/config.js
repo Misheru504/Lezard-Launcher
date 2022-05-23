@@ -3,7 +3,7 @@ const fetch = require("node-fetch")
 let url = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url
 
 let config = `${url}/launcher/config-launcher/config.json`;
-let news = `${url}/launcher/news-launcher/assets/php/news/GetNews.php`;
+let news = `${url}/launcher/tempNews.json`;
 
 class Config {
     GetConfig() {

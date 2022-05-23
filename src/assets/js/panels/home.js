@@ -150,7 +150,7 @@ class Home {
             })
 
             launch.on('data', (e) => {
-                new logger('Minecraft', '#36b030', logcontent);
+                new logger('Minecraft', '#3036b0', logcontent);
                 if(launcherSettings.launcher.close === 'close-launcher') win.hide();
                 progressBar.style.display = "none"
                 win.setProgressBar(0);
