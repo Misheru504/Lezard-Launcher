@@ -1,8 +1,8 @@
 {
     "name": "lezard-launcher",
-    "version": "0.0.6",
+    "version": "0.0.6-beta2",
     "productName": "Lezard Launcher",
-    "description": "Launcher Mincraft custom (crack, premium)",
+    "description": "Launcher of the Lezard Client ( https://github.com/MissionSteam504/Lezard-Client )",
     "main": "src/index.html",
     "author": "MissionSteam504, Luuxis",
     "window": {
@@ -35,7 +35,7 @@
     "license": "CC0",
     "build": {
         "appId": "Lezard Launcher",
-        "nwVersion": "0.64.0",
+        "nwVersion": "0.64.1",
         "packed": false,
         "args": ["--user-data-dir=./AppData/launcher data"],
         "targets": ["zip", "nsis7z"],
