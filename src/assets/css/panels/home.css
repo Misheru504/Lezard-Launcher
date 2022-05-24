@@ -45,8 +45,16 @@
     transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
 }
 
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 .icon-settings:before {
     font-size: 40px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
 }
 
 .play-element {
@@ -217,6 +225,8 @@
 .news-end span {
     font-style: italic;
 }
+
+
 
 .info-list {
     position: relative;

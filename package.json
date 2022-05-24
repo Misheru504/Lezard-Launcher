@@ -1,6 +1,6 @@
 {
     "name": "lezard-launcher",
-    "version": "0.0.6-beta2",
+    "version": "0.0.6-beta3",
     "productName": "Lezard Launcher",
     "description": "Launcher of the Lezard Client ( https://github.com/MissionSteam504/Lezard-Client )",
     "main": "src/index.html",
