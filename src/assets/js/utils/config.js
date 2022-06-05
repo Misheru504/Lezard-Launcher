@@ -4,6 +4,7 @@ let url = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url
 
 let config = `${url}/launcher/config-launcher/config.json`;
 let news = `${url}/launcher/tempNews.json`;
+let servers = `${url}/launcher/serverList.json`
 
 class Config {
     GetConfig() {
@@ -22,6 +23,20 @@ class Config {
             try {
                 let news = await rss.json();
                 return news;
+            } catch (error) {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    async GetServers() {
+        let rss = await fetch(servers);
+        if (rss.status === 200) {
+            try {
+                let servers = await rss.json();
+                return servers;
             } catch (error) {
                 return false;
             }

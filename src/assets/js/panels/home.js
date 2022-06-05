@@ -10,10 +10,11 @@ const dataDirectory = process.env.APPDATA || (process.platform == 'darwin' ? `${
 
 class Home {
     static id = "home";
-    async init(config, news) {
+    async init(config, news, servers) {
         this.config = config
         this.news = await news
         this.database = await new database().init();
+        this.servers = await servers;
         this.initNews();
         this.initLaunch();
         this.initStatusServer();
@@ -175,20 +176,75 @@ class Home {
     }
 
     async initStatusServer() {
-        let nameServer = document.querySelector('.server-text .name');
-        let serverMs = document.querySelector('.server-text .desc');
-        let playersConnected = document.querySelector('.etat-text .text');
-        let online = document.querySelector(".etat-text .online");
-        let serverPing = await new status(this.config.status.ip, this.config.status.port).getStatus();
+        let servers = document.querySelector('.server-list');
+        var gap = 0;
 
-        if (!serverPing.error) {
-            nameServer.textContent = this.config.status.name;
-            serverMs.innerHTML = `<span class="green">Online</span> - ${serverPing.ms}ms`;
-            online.classList.toggle("off");
-            playersConnected.textContent = serverPing.players;
-        } else if(serverPing.error){
-            nameServer.textContent = 'Server unavailable';
-            serverMs.innerHTML = `<span class="red">Offline</span>`;
+        if (this.servers) {
+            if (!this.servers.length) {
+                let listServer = document.createElement('div');
+                listServer.classList.add('server');
+                listServer.innerHTML = `
+                    <img class="server-img" src="https://www.pngmart.com/files/17/Wrong-Symbol-PNG-Image.png"/>
+                    <div class="server-text">
+                        <div class="name">No servers</div>
+                        <div class="desc"><span class="red">Closed</span> - 0ms</div>
+                    </div>
+                    <div class="etat-text">
+                        <div class="text">0</div>
+                        <div class="online off"></div>
+                    </div>`
+                servers.appendChild(listServer);
+            } else {
+                for (let Server of this.servers) {
+                    // console.log(`Server: ${Server.name}, ip: ${Server.ip}:${Server.port}, image link: ${Server.img}`);
+                    let listServer = document.createElement('div');
+                    listServer.classList.add('server');
+                    listServer.style.top = gap + "px";
+
+                    let serverPing = await new status(Server.ip, Server.port).getStatus();
+
+                    if(!serverPing.error){
+                        listServer.innerHTML = `
+                            <img class="server-img" src="${Server.img}"/>
+                            <div class="server-text">
+                                <div class="name">${Server.name}</div>
+                                <div class="desc"><span class="green">Online</span> - ${serverPing.ms}ms</div>
+                            </div>
+                            <div class="etat-text">
+                                <div class="text">${serverPing.players}</div>
+                                <div class="online"></div>
+                            </div>`
+                    }else {
+                        listServer.innerHTML = `
+                            <img class="server-img" src="${Server.img}"/>
+                            <div class="server-text">
+                                <div class="name">${Server.name}</div>
+                                <div class="desc"><span class="red">Closed</span> - 0ms</div>
+                            </div>
+                            <div class="etat-text">
+                                <div class="text">0</div>
+                                <div class="online off"></div>
+                            </div>`
+                    }
+                    gap = gap+7;
+                    servers.appendChild(listServer);
+                }
+            }
+            servers.appendChild(document.createElement('br'));
+        } else {
+            let listServer = document.createElement('div');
+            listServer.classList.add('server');
+            listServer.innerHTML = `
+                <img class="server-img" src="https://www.pngmart.com/files/17/Wrong-Symbol-PNG-Image.png"/>
+                    <div class="server-text">
+                        <div class="name">No servers</div>
+                        <div class="desc"><span class="red">Closed</span> - 0ms</div>
+                    </div>
+                <div class="etat-text">
+                    <div class="text">0</div>
+                    <div class="online off"></div>
+                </div>`
+            servers.appendChild(listServer);
         }
     }
 

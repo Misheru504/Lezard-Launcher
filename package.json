@@ -1,8 +1,8 @@
 {
     "name": "lezard-launcher",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "productName": "Lezard Launcher",
-    "description": "Launcher of the Lezard Client ( https://github.com/MissionSteam504/Lezard-Client )",
+    "description": "Launcher of the Lezard Client (https://github.com/MissionSteam504/Lezard-Client)",
     "main": "src/index.html",
     "author": "MissionSteam504, Luuxis",
     "window": {
