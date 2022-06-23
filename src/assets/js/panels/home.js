@@ -108,7 +108,7 @@ class Home {
             }
 
             let opts = {
-                url: this.config.game_url === "" || this.config.game_url === undefined ? `${urlpkg}/files` : this.config.game_url,
+                url: "http://www.lezard-client.com/storage/launcher-files/files",
                 authenticator: account,
                 path: `${dataDirectory}/${process.platform == 'darwin' ? this.config.dataDirectory : `.${this.config.dataDirectory}`}`,
                 version: this.config.game_version,
@@ -118,7 +118,7 @@ class Home {
                 args: [...javaArgs.args, ...this.config.game_args],
                 screen,
                 custom: this.config.custom,
-                verify: this.config.verify,
+                verify: false,
                 ignored: this.config.ignored,
                 memory: {
                     min: `${ram.ramMin * 1024}M`,

@@ -2,7 +2,7 @@ const pkg = nw.global.manifest.__nwjs_manifest;
 const fetch = require("node-fetch")
 let url = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url
 
-let config = `${url}/launcher/config-launcher/config.json`;
+let config = `${url}/launcher/config.json`;
 let news = `${url}/launcher/tempNews.json`;
 let servers = `${url}/launcher/serverList.json`
 
