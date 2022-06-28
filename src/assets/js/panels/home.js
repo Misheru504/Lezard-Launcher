@@ -108,7 +108,7 @@ class Home {
             }
 
             let opts = {
-                url: "http://www.lezard-client.com/storage/launcher-files/files",
+                url: this.config.game_url === "" || this.config.game_url === undefined ? `${urlpkg}/files/` : this.config.game_url,
                 authenticator: account,
                 path: `${dataDirectory}/${process.platform == 'darwin' ? this.config.dataDirectory : `.${this.config.dataDirectory}`}`,
                 version: this.config.game_version,

@@ -6,19 +6,19 @@
     "main": "src/index.html",
     "author": "MissionSteam504, Luuxis",
     "window": {
-        "title": "Lezard update",
+        "title": "Lezard Update",
         "width": 400,
         "height": 500,
         "frame": false,
         "resizable": false,
         "position": "center",
-        "icon": "src/assets/images/icon.png"
+        "icon": "./src/assets/images/icon.png"
     },
     "engines": {
         "node": "16.x.x"
     },
     "chromium-args": "--enable-logging --v=1",
-    "url": "http://82.165.116.150:80/storage/launcher-files",
+    "url": "http://www.lezard-client.com/storage/launcher-files",
     "user": false,
     "webkit": {
         "plugin": true
@@ -60,13 +60,13 @@
         "overriddenProperties": {
             "main": "app/index.html",
             "window": {
-                "title": "Lezard update",
+                "title": "Lezard Update",
                 "width": 400,
                 "height": 500,
                 "frame": false,
                 "resizable": false,
                 "position": "center",
-                "icon": "app/assets/images/icon.png"
+                "icon": "./src/assets/images/icon.png"
             }
         },
         "outputPattern": "${NAME}-${PLATFORM}-${ARCH}",
@@ -74,7 +74,7 @@
             "productName": "Lezard Launcher",
             "companyName": "Lezard Launcher",
             "copyright": "copyright",
-            "icon": "src/assets/images/icon.ico"
+            "icon": "./src/assets/images/icon2.ico"
         },
         "mac": {
             "displayName": "Lezard-Launcher",
@@ -85,7 +85,7 @@
         },
         "nsis": {
             "installDirectory": "$LOCALAPPDATA\\Programs\\${_COMPANYNAME}",
-            "icon": "src/assets/images/icon.ico",
+            "icon": "./src/assets/images/icon2.ico",
             "diffUpdaters": false
         }
     },
