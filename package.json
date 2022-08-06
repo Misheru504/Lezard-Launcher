@@ -37,8 +37,13 @@
         "appId": "Lezard Launcher",
         "nwVersion": "0.64.1",
         "packed": false,
-        "args": ["--user-data-dir=./AppData/launcher data"],
-        "targets": ["zip", "nsis7z"],
+        "args": [
+            "--user-data-dir=./AppData/launcher data"
+        ],
+        "targets": [
+            "zip",
+            "nsis7z"
+        ],
         "strippedProperties": [
             "description",
             "engines",
@@ -90,7 +95,9 @@
         }
     },
     "nodemonConfig": {
-        "ignore": ["app/*"],
+        "ignore": [
+            "app/*"
+        ],
         "ext": "js,html,css"
     },
     "devDependencies": {
@@ -99,6 +106,8 @@
         "nwjs-build": "^1.2.0"
     },
     "dependencies": {
+        "discord-rpc": "^4.0.1",
+        "md5": "^2.3.0",
         "minecraft-java-core": "^1.4.2",
         "node-fetch": "^2.6.7",
         "nw-autoupdater-luuxis": "^1.1.7"

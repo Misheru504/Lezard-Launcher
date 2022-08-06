@@ -27,7 +27,6 @@ class Splash {
             { "message": "Touch grass!", "author": "MissionSteam504" },
             { "message": "Uh, nothing went wrong!", "author": "MissionSteam504" },
             { "message": "Never gonna give you up", "author": "MissionSteam504" },
-            { "message": "For the french gang: pain au chocolat ou chocolatine?", "author": "MissionSteam504" },
             { "message": "Thanks to luuxis!", "author": "MissionSteam504" }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];

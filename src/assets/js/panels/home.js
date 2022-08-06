@@ -1,10 +1,36 @@
 'use strict';
 
-import { logger, database, changePanel, status } from '../utils.js';
+import { logger, database, changePanel, status, setActivity, delay } from '../utils.js';
 
 const { launch } = require('minecraft-java-core');
 const pkg = nw.global.manifest.__nwjs_manifest;
 const win = nw.Window.get();
+
+const DiscordRPC = require('discord-rpc');
+const clientId = '971435977199464528';
+DiscordRPC.register(clientId);
+const startTimestamp = new Date();
+const rpc = new DiscordRPC.Client({ transport: 'ipc' });
+
+rpc.on('ready', async () => {
+    if(true){ // TODO: Something to enable/disable discord with saving
+        console.log('[DiscordRPC] Initializing DiscordRPC');
+        console.log(`[DiscordRPC] Authed for user ${rpc.user.username}#${rpc.user.discriminator}`);
+        
+        setTimeout(function(){
+            console.log("[DiscordRPC] Starting...")
+            setActivity(rpc);
+
+            setInterval(() => {
+                setActivity(rpc);
+            }, 30e3);
+        }, 5e3);
+        
+    }else{
+        console.log('[DiscordRPC] DiscordRPC Disabled, Aborting. You can enable it in the settings')
+    }
+});
+rpc.login({ clientId }).catch(console.error);
 
 const dataDirectory = process.env.APPDATA || (process.platform == 'darwin' ? `${process.env.HOME}/Library/Application Support` : process.env.HOME)
 
@@ -263,4 +289,5 @@ class Home {
         return { year: year, month: allMonth[month - 1], day: day }
     }
 }
+
 export default Home;
