@@ -66,7 +66,7 @@ function setActivity(rpc) {
 
     let hash = md5(username);
 
-    getJSON('http://localhost:3000/api/getGame?hwid=dev-hwid', function(err, data){
+    getJSON('http://lezard-client.com/api/getGame?hwid=dev-hwid', function(err, data){
         if(err) throw err;
 
         var title = "In game";
