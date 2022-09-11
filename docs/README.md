@@ -1,5 +1,6 @@
+<h3 align="center">(This project is no longer maintained)</h3>
 <img src="https://user-images.githubusercontent.com/91340350/168075608-0ec807e8-6087-477f-aa69-fb31e495d9be.png" width="100%"></img>
-<h1 align="center">Lezard Launcher</h1>
+<h1 align="center">Lezard Launcher</h1> 
 
 [<p align="center">
 <img src="https://img.shields.io/badge/Build-Release-brigthgreen.svg?logo=appveyor" alt="build">](https://github.com/MissionSteam504/Lezard-Launcher/releases) 
